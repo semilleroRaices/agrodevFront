@@ -1,0 +1,68 @@
+<!--&lt;!&ndash;<div class="md-inline-form">&ndash;&gt;-->
+  <!--&lt;!&ndash;<p>Fill the <span class="text-bold">Lastname</span> field to reveal the conditional step!</p>&ndash;&gt;-->
+  <!---->
+  <!--<div layout="column" layout-gt-xs="row" flex layout-align="center center">-->
+    <!--&lt;!&ndash;<md-input-container flex="100" flex-gt-xs="50">&ndash;&gt;-->
+      <!--&lt;!&ndash;<input type="text" name="firstname" ng-model="vm.verticalStepper.step1.firstname"&ndash;&gt;-->
+             <!--&lt;!&ndash;placeholder="Firstname"&ndash;&gt;-->
+             <!--&lt;!&ndash;required>&ndash;&gt;-->
+      <!--&lt;!&ndash;<div ng-messages="verticalStep1.firstname.$error"&ndash;&gt;-->
+           <!--&lt;!&ndash;ng-show="verticalStep1.firstname.$touched"&ndash;&gt;-->
+           <!--&lt;!&ndash;role="alert">&ndash;&gt;-->
+        <!--&lt;!&ndash;<div ng-message="required">&ndash;&gt;-->
+          <!--&lt;!&ndash;<span>Firstname field is required.</span>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</md-input-container>&ndash;&gt;-->
+    <!--&lt;!&ndash;&ndash;&gt;-->
+    <!--&lt;!&ndash;<md-input-container flex="100" flex-gt-xs="50">&ndash;&gt;-->
+      <!--&lt;!&ndash;<input type="text" name="lastname" ng-model="vm.verticalStepper.step1.lastname"&ndash;&gt;-->
+             <!--&lt;!&ndash;placeholder="Lastname">&ndash;&gt;-->
+      <!--&lt;!&ndash;<div ng-messages="verticalStep1.lastname.$error"&ndash;&gt;-->
+           <!--&lt;!&ndash;ng-show="verticalStep1.lastname.$touched"&ndash;&gt;-->
+           <!--&lt;!&ndash;role="alert">&ndash;&gt;-->
+        <!--&lt;!&ndash;<div ng-message="required">&ndash;&gt;-->
+          <!--&lt;!&ndash;<span>Lastname field is required.</span>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</md-input-container>&ndash;&gt;-->
+    <!--<table id="parametros" datatable="" class="row-border hover" style=" margin-left: auto;margin-right: auto;"></table>-->
+
+  <!--</div>-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--<script>-->
+  <!---->
+    <!--$('#parametros').appendGrid({-->
+      <!--caption: 'P A R A M E T R O S',-->
+      <!--initRows: 1,-->
+      <!--hideButtons: {-->
+        <!--moveUp: true,-->
+        <!--moveDown: true,-->
+        <!--insert: true,-->
+        <!--remove: true-->
+      <!--},-->
+      <!--columns: [-->
+        <!--{ name: 'id', display: 'id', type: 'text', ctrlCss: { width: '300px' }, ctrlAttr: { 'disabled': 'disabled' } },-->
+        <!--{ name: 'name', display: 'NOMBRE', type: 'text', ctrlCss: { width: '300px' }, ctrlAttr: { 'disabled': 'disabled' } },-->
+        <!--{ name: 'value', display: 'VALOR', type: 'text', ctrlCss: { width: '80px' } },-->
+        <!--{ name: 'status', display: 'ESTADO', type: 'text', ctrlCss: { width: '80px' } }-->
+      <!--]-->
+    <!--});-->
+    <!--$('#parametros').appendGrid('hideColumn', 'id');-->
+  <!---->
+<!--</script>-->
+<!--<form name="formParams" class="md-inline-form" ms-form-wizard-form novalidate>-->
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="text" name="firstname" ng-model="vm.formParams.firstname"
+             placeholder="Firstname"
+             required>
+      <div ng-messages="formParams.firstname.$error"
+           role="alert">
+        <div ng-message="required">
+          <span>Firstname field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+  </div>
+<!--</form>-->

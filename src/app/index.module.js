@@ -7,7 +7,7 @@
      */
     angular
         .module('fuse', [
-
+          
             // Core
             'app.core',
 
@@ -21,6 +21,9 @@
             'app.quick-panel',
 
             // Sample
-            'app.sample'
+            'app.sample',
+
+            // Configuracion
+            'app.configuracion'
         ]);
 })();

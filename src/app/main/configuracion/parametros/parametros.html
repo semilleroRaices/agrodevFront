@@ -1,0 +1,24 @@
+
+<table id="parametros" datatable="" class="row-border hover"></table>
+
+<script>
+  
+    $('#parametros').appendGrid({
+      caption: 'CONFIGURACION DE PARAMETROS',
+      initRows: 1,
+      hideButtons: {
+        moveUp: true,
+        moveDown: true,
+        insert: true,
+        remove: true
+      },
+      columns: [
+        { name: 'id', display: 'id', type: 'text', ctrlCss: { width: '300px' }, ctrlAttr: { 'disabled': 'disabled' } },
+        { name: 'name', display: 'NOMBRE', type: 'text', ctrlCss: { width: '300px' }, ctrlAttr: { 'disabled': 'disabled' } },
+        { name: 'value', display: 'VALOR', type: 'text', ctrlCss: { width: '80px' } },
+        { name: 'status', display: 'ESTADO', type: 'text', ctrlCss: { width: '80px' } }
+      ]
+    });
+    $('#parametros').appendGrid('hideColumn', 'id');
+  
+</script>

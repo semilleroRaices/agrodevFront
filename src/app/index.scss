@@ -11,3 +11,26 @@
  */
 // injector
 // endinjector
+
+//Ubicar el boton de datepicker
+.md-datepicker-button{
+  top: 0 !important;
+}
+.md-datepicker-input-container{
+  margin: 0 !important;
+}
+._md-datepicker-floating-label._md-datepicker-has-calendar-icon > label:not(.md-no-float):not(.md-container-ignore) {
+  left: 40px !important;
+}
+
+
+//MD-INPUT-CONTAINER
+md-input-container{
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+
+//PADDING BOTONES WIZARD
+.ms-form-wizard .navigation{
+  padding: 5px;
+}

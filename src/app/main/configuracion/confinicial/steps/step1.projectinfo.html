@@ -1,0 +1,133 @@
+<div layout="row" layout-md="column" flex class="">
+  
+  <div flex layout="column">
+    
+    <div layout="column">
+      
+      <md-input-container flex>
+        <input type="text" name="name"
+               ng-model="vm.formProject.name"
+               placeholder="Nombre"
+               required>
+        <div ng-messages="formProject.name.$error"
+             ng-show="formProject.name.$touched"
+             role="alert">
+          <div ng-message="required">
+            <span>{{vm.textforms.required}}</span>
+          </div>
+        </div>
+      </md-input-container>
+      
+      <md-input-container flex>
+        <input type="text" name="object"
+               ng-model="vm.formProject.object"
+               placeholder="Objeto"
+               required>
+        <div ng-messages="formProject.object.$error"
+             ng-show="formProject.object.$touched"
+             role="alert">
+          <div ng-message="required">
+            <span>{{vm.textforms.required}}</span>
+          </div>
+        </div>
+      </md-input-container>
+      
+      <md-input-container flex>
+        <input type="text" name="activity"
+               ng-model="vm.formProject.activity"
+               placeholder="Actividad"
+               required>
+        <div ng-messages="formProject.activity.$error"
+             ng-show="formProject.activity.$touched"
+             role="alert">
+          <div ng-message="required">
+            <span>{{vm.textforms.required}}</span>
+          </div>
+        </div>
+      </md-input-container>
+    
+    </div>
+    
+    <div layout="row">
+      <md-input-container>
+        <label>Fecha Inicio</label>
+        <md-datepicker id="startDate" name="startDate" ng-model="vm.formProject.startDate" class="margin-right-5" required></md-datepicker>
+        <div ng-messages="formProject.startDate.$error"
+             ng-show="formProject.startDate.$touched"
+             role="alert">
+          <div ng-message="required" style="margin-left: 5px;">
+            <span>{{vm.textforms.required}}</span>
+          </div>
+        </div>
+      </md-input-container>
+      <md-input-container>
+        <label>Fecha Fin</label>
+        <md-datepicker id="endDate" name="endDate" ng-model="vm.formProject.endDate" class="margin-right-5" required></md-datepicker>
+        <div ng-messages="formProject.endDate.$error"
+             ng-show="formProject.endDate.$touched"
+             role="alert">
+          <div ng-message="required" style="margin-left: 5px;">
+            <span>{{vm.textforms.required}}</span>
+          </div>
+        </div>
+      </md-input-container>
+      <!--<md-datepicker id="ffin" ng-model="vm.formulario.ffin" placeholder="Fecha Fin"></md-datepicker>-->
+    </div>
+    
+    <div layout="row">
+      
+      <md-input-container flex>
+        <label>Sector económico</label>
+        <md-select ng-model="vm.formProject.economicSector" ng-model-options="{trackBy: '$value.id'}" required>
+          <md-option ng-repeat="(index, sector) in vm.economicSectors" ng-value="sector.id"  ng-selected="index === 0">
+            {{sector.name}}
+          </md-option>
+        </md-select>
+      </md-input-container>
+      
+      <md-input-container flex>
+        <input type="number" name="amount" ng-model="vm.formProject.amount"
+               ng-minlength="0"
+               placeholder="Valor $"
+               required>
+        <div ng-messages="formProject.amount.$error"
+             ng-show="formProject.amount.$touched"
+             role="alert">
+          <div ng-message="required">
+            <span>{{vm.textforms.required}}</span>
+          </div>
+        </div>
+      </md-input-container>
+    
+    </div>
+    
+    <div layout="row" layout-align="center center">
+      <!--<button ng-click="vm.tester()">TESTER</button>-->
+      <!--<p>Cargar Archivo de proyecto</p>-->
+      <md-button class="md-raised md-primary" ngf-select ng-model="vm.file" name="file" ngf-pattern="'.pdf'"
+           ngf-accept="'.pdf'" ngf-max-size="20MB" ngf-min-height="100" ngf-select="vm.uploadFile($file)"><md-icon md-font-icon="icon-cloud-upload"></md-icon> Seleccionar PDF
+      </md-button>
+      <span>{{vm.file.name}}</span>
+      
+      <!--<md-button class=" md-raised md-primary" ng-click="vm.uploadFile()">-->
+        <!--<md-icon md-font-icon="icon-cloud-upload"></md-icon>-->
+        <!--Seleccionar Archivo</md-button>-->
+      
+      <!--<input  class="md-button md-primary" type="file" ngf-select="vm.uploadFile($file)" accept="application/pdf">-->
+      <!--<div class="md-button" ngf-select="upload($file)">Upload on file select</div>-->
+      <!--<div class="button" ngf-select="uploadFiles($files)" multiple="multiple">Upload on file select</div>-->
+      <!--Drop File:-->
+      <!--<div ngf-drop="uploadFiles($files)" class="drop-box"-->
+      <!--ngf-drag-over-class="'dragover'" ngf-multiple="true"-->
+      <!--ngf-pattern="'image/*,application/pdf'">Drop Images or PDFs files here</div>-->
+      <!--<div ngf-no-file-drop>File Drag/Drop is not supported for this browser</div>-->
+    </div>
+  
+  </div>
+  <div flex class="md-whiteframe-1dp">
+    <iframe ngf-src="vm.file"></iframe>
+  </div>
+
+
+</div>
+
